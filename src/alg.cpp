@@ -34,7 +34,7 @@ count--;
 c+=x;
 return c;
 }
-double cosn(double x, uint16_t count) {
+ double cosn(double x, uint16_t count) {
 double d=0;
 while ( count!=1 ) {
 d=pow( -1,count-1 )*calcItem( x,2*count-2 );
