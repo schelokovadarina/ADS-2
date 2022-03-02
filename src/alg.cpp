@@ -31,7 +31,7 @@ return b;
 double sinn(double x, uint16_t count) {
 double c = 0;
 while (count != 1) {
-c = c + pow(-1, count - 1) * calcItem(x, 2 * count - 1);
+c = c + pown(-1, count - 1) * calcItem(x, 2 * count - 1);
 count--;
 }
 c += x;
@@ -40,7 +40,7 @@ return c;
 double cosn(double x, uint16_t count) {
 double d = 0;
 while (count != 1) {
-d = d + pow(-1, count - 1) * calcItem(x, 2 * count - 2);
+d = d + pown(-1, count - 1) * calcItem(x, 2 * count - 2);
 count--;
 }
 d += 1;
