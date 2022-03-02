@@ -4,7 +4,13 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
-return pow(value, n);
+if (n == 0) {
+return 1;
+} else if (n == 1) {
+return value;
+} else {
+return value * pown(value, n - 1);
+}
 }
 uint64_t fact(uint16_t n) {
 if (n <= 1) {
