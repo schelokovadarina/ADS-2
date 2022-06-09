@@ -5,18 +5,21 @@
 
 double pown(double value, uint16_t n) {
 if (n == 0) {
-return 1;
-} else if (n == 1) {
-return value;
-} else {
-return value * pown(value, n - 1);
+	return 1;
+}
+else if (n == 1) {
+	return value;
+}
+else {
+	return value * pown(value, n - 1);
 }
 }
 uint64_t fact(uint16_t n) {
 if (n <= 1) {
-return 1;
-} else {
-return n * fact(n - 1);
+	return 1;
+}
+else {
+	return n * fact(n - 1);
 }
 }
 double calcItem(double x, uint16_t n) {
@@ -27,8 +30,8 @@ return a;
 double expn(double x, uint16_t count) {
 double b = 0;
 while (count != 0) {
-b = b + calcItem(x, count);
-count--;
+	b = b + calcItem(x, count);
+	count--;
 }
 b += 1;
 return b;
@@ -36,8 +39,8 @@ return b;
 double sinn(double x, uint16_t count) {
 double c = 0;
 while (count != 1) {
-c = c + pown(-1, count - 1) * calcItem(x, 2 * count - 1);
-count--;
+	c = c + pown(-1, count - 1) * calcItem(x, 2 * count - 1);
+	count--;
 }
 c += x;
 return c;
@@ -45,10 +48,11 @@ return c;
 double cosn(double x, uint16_t count) {
 double d = 0;
 while (count != 1) {
-d = d + pown(-1, count - 1) * calcItem(x, 2 * count - 2);
-count--;
+	d = d + pown(-1, count - 1) * calcItem(x, 2 * count - 2);
+	count--;
 }
 d += 1;
 return d;
 }
+
 
